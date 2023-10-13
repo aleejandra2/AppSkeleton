@@ -22,24 +22,6 @@
           ></ion-input>
         </ion-item>
       </div>
-      <div class="form-input">
-        <ion-item>
-          <ion-label position="floating"> Contraseña</ion-label>
-          <ion-input
-          type="password"
-          [counter]="true"
-          labelPlacement="floating"
-          minlength="4"
-          maxlength="4"
-          pattern="[0-9]*"
-          ngModel
-          #contrasenia="ngModel"
-          errorText="Contraseña inválida"
-          helperText="Ingrese contraseña"
-          required
-          ></ion-input>
-        </ion-item>
-      </div>
     </div>
     <div class="action-button ion-padding">
       <ion-button (click)="guardar()" size="small" class="home-button" [disabled]="usuario.length < 3 || usuario.length > 8 || contrasenia.invalid || contrasenia.value.length !== 4"> Ingresar</ion-button>
